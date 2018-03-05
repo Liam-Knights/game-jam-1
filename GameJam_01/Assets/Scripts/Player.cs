@@ -63,8 +63,6 @@ public class Player : MonoBehaviour {
 
     }
 
-
-
     private void OnCollisionEnter(Collision collision)
     {
         if(speed >= DashSpeed)

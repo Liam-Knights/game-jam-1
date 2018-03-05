@@ -13,12 +13,12 @@ public class DepositZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Player contact = other.getComponent<Player>();
+        Player contact = other.transform.GetComponent<Player>();
 
-        //if (contact != null)
-        //{
-        //    manager.AddScore(true, contact.getRubbish());
-        //    contact.EmptyRubbish();
-        //}
+        if (contact != null)
+        {
+            //manager.AddScore(true, contact.getRubbish());
+            //contact.EmptyRubbish();
+        }
     }
 }

@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
-    [SerializeField]
     private int p1Score;
 
-    [SerializeField]
     private int p2Score;
 
     [SerializeField]
-    private int roundTimeM;
+    private int roundTimeMinutes;
 
     [SerializeField]
-    private int roundTimeS;
+    private int roundTimeSeconds;
 
+    [SerializeField]
+    private float flashSpeed;
+
+    [Header("UI References")]
     [SerializeField]
     private Text Timer;
 
@@ -36,8 +38,8 @@ public class Manager : MonoBehaviour
         p1Score = 0;
         p2Score = 0;
 
-        currentMinute = roundTimeM;
-        currentSeconds = roundTimeS;
+        currentMinute = roundTimeMinutes;
+        currentSeconds = roundTimeSeconds;
 
         InvokeRepeating("CountDown", 0.0f, 1.0f);
     }
@@ -64,44 +66,49 @@ public class Manager : MonoBehaviour
 
     private void CountDown()
     {
-        if (roundTimeS > 0.0)
+        if (currentSeconds > 0.0)
         {
-            roundTimeS -= 1;
+            currentSeconds -= 1;
         }
-        else if (roundTimeM > 0)
+        else if (currentMinute > 0)
         {
-            roundTimeM -= 1;
-            roundTimeS = 59;
+            currentMinute -= 1;
+            currentSeconds = 59;
         }
         else
         {
-            roundTimeM = 0;
-            roundTimeS = 0;
+            currentMinute = 0;
+            currentSeconds = 0;
 
             CancelInvoke();
+
+            FlashTimer();
+
             EndRound();
         }
 
-        Timer.text = "Time: ";
 
-        if (roundTimeM < 10)
+        // Format Text to match a digital Clock
+        Timer.text = "";
+
+        if (currentMinute < 10)
         {
-            Timer.text += "0" + roundTimeM;
+            Timer.text += "0" + currentMinute;
         }
         else
         {
-            Timer.text += roundTimeM;
+            Timer.text += currentMinute;
         }
 
         Timer.text += ":";
 
-        if (roundTimeS < 10)
+        if (currentSeconds < 10)
         {
-            Timer.text += "0" + roundTimeS;
+            Timer.text += "0" + currentSeconds;
         }
         else
         {
-            Timer.text += roundTimeS;
+            Timer.text += currentSeconds;
         }
     }
 
@@ -114,6 +121,20 @@ public class Manager : MonoBehaviour
         else
         {
             p2Score += score;
+        }
+    }
+
+    private void FlashTimer()
+    {
+        if (waitingToStart)
+        {
+            Timer.enabled = true;
+            Timer.text = "";
+        }
+        else
+        {
+            Timer.enabled = !Timer.enabled;
+            Invoke("FlashTimer", flashSpeed);
         }
     }
 }
