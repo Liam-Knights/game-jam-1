@@ -37,6 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4414715187527096}
+  - component: {fileID: 114895853103803988}
   m_Layer: 0
   m_Name: DepositZone
   m_TagString: Untagged
@@ -112,6 +113,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376456303631802}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114895853103803988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884486231597538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a1ef38c49b4564ba97ad954152c935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136987326623171898
 CapsuleCollider:
   m_ObjectHideFlags: 1

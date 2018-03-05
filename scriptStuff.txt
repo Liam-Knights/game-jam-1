@@ -7,6 +7,11 @@ Player:
 - button mashing
 
 
+Public Functions:
+
++ getRubbishAmount() : int
++ RemoveRubbish : void
+
 Game systems:
 
 - Rubbish spawning

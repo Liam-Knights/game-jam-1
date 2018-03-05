@@ -18,7 +18,7 @@ using System.Collections.Generic;
  |
  *===========================================================================*/
 
-public class OBJExporter : ScriptableWizard
+public class OBJExport : ScriptableWizard
 {
     public bool onlySelectedObjects = false;
     public bool applyPosition = true;
