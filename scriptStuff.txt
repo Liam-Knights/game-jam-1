@@ -1,0 +1,15 @@
+Player:
+
+- Movement
+- Dash
+- Rubbish Capacity
+- stun
+- button mashing
+
+
+Game systems:
+
+- Rubbish spawning
+- score keeping
+- round start/end
+- cleaner select*
