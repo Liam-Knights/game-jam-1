@@ -61,7 +61,11 @@ public class Player : MonoBehaviour {
     void Dash()
     {
 
+        speed = DashSpeed;
+
     }
+
+
 
     private void OnCollisionEnter(Collision collision)
     {
