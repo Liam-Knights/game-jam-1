@@ -738,27 +738,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e1e555df066fb43ae84c565057085a, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1470081756 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1302454161874644, guid: 61e1e555df066fb43ae84c565057085a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1320008183}
---- !u!114 &1470081757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1470081756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2498d31ab97d564c8aa75725b7ba36d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: []
-  baseSpeed: 10
-  DashSpeed: 20
-  RubbishCap: 15
-  BaseMashAmount: 10
 --- !u!1001 &1928741148
 Prefab:
   m_ObjectHideFlags: 0
