@@ -61,6 +61,8 @@ public class Player : MonoBehaviour {
     void Dash()
     {
 
+        speed = DashSpeed;
+
     }
 
 
